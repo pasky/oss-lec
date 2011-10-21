@@ -1,0 +1,223 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{circles}
+\useoutertheme[subsection=false]{smoothbars}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Open source programování}
+\subtitle{Otevřené operační systémy}
+\author{Petr Baudiš $\langle${\tt pasky@ucw.cz}$\rangle$}
+\institute{MFF UK 2011\\
+	\vskip 1ex
+	\pgfdeclareimage[height=4ex]{ccbysa}{by-sa.pdf}
+	\pgfuseimage{ccbysa}
+}
+\date{}
+\frame{\titlepage}
+
+\section{Úvod}
+
+\subsection{}
+\begin{frame}{Úžasný nový svět\dots}
+\begin{center}
+{\bf Otevřené operační systémy}
+\end{center}
+\begin{itemize}
+\item Výborně prakticky použitelný (až na strávený čas)
+\item Zdrojový kód od všech úrovní systému
+\pause
+\item Jádro, systémové služby, síťové servery, vývojové nástroje\\grafické rozhraní, uživatelské programy
+\item Někdy i BIOS, někdy uzavřený firmware
+\end{itemize}
+\begin{center}
+% TODO: tux
+\includegraphics[width=2cm]{heckert_gnu.pdf}\hskip 1em
+% TODO: BSD
+% TODO: opensolaris
+% TODO: Haiku
+% TODO: reactOS
+\end{center}
+\end{frame}
+
+\subsection{}
+\begin{frame}{O čem dnes}
+\begin{itemize}
+\item Historické okénko (BSD, GNU a Linux)
+\item Z nabídky otevřených operačních systémů
+\item Architektura systému Linux
+\end{itemize}
+\end{frame}
+
+
+\section{Historie}
+
+\subsection{}
+\begin{frame}{Malý návrat k historii}
+\begin{itemize}
+\item BSD386, GNU a Hurd, Minix a Linux
+\end{itemize}
+\end{frame}
+
+
+\section{Přehled}
+
+\subsection{}
+\begin{frame}{FreeDos}
+\begin{itemize}
+\item Motivace
+\item Stav
+\item Vývoj
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{ReactOS}
+\begin{itemize}
+\item Motivace
+\item Stav
+\item Vývoj
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Haiku}
+\begin{itemize}
+\item Motivace
+\item Stav
+\item Vývoj
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Minix}
+\begin{itemize}
+\item Motivace
+\item Stav
+\item Vývoj
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{*BSD}
+\begin{itemize}
+\item z UNIXu
+\item FreeBSD:
+\item NetBSD:
+\item OpenBSD:
+\item Dragonfly etc.
+\item Kernel+userspace
+\item Ports, CVS, commiters
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{OpenSolaris}
+\begin{itemize}
+\item Neutěšený stav
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Linux}
+\begin{itemize}
+\item Stav
+\item Vývoj jádra
+\item Fragmenty userspace
+\end{itemize}
+\end{frame}
+
+
+\section{Architektura Linuxu}
+
+\subsection{}
+\begin{frame}{Distribuce}
+\begin{itemize}
+\item Debian, Ubuntu
+\item RedHat (Fedora/RHEL, CentOS, \dots)
+\item SUSE (OpenSUSE/SLE)
+\item Arch Linux
+\item Gentoo, Linux from scratch
+\item Slackware
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Jádro systému}
+\begin{itemize}
+\item TODO
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Dno userspace}
+\begin{itemize}
+\item GNU
+\item glibc
+\item toolchain
+\item coreutils etc. GNU
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Koordinace služeb}
+\begin{itemize}
+\item sysvinit
+\item dbus
+\item systemd
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Rozhraní jádra}
+\begin{itemize}
+\item udev, udisks, upower
+\item HAL R.I.P.
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Grafické rozhraní}
+\begin{itemize}
+\item X.org
+\item DRI, DRM, KMS
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Desktopové prostředí}
+\begin{itemize}
+\item GNOME, KDE, Xfce, \dots
+\item FreeDesktop.org
+\item Firefox, SpiderMoneky, jslinux --- a jedeme znovu! ;-)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Skládačka}
+\begin{itemize}
+\item Naučte se v praxi --- Linux From Scratch!
+\item Nebo alespoň Gentoo
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Děkuji za pozornost}
+\begin{center}
+Příště: Zajímavé a významné open source projekty
+\end{center}
+\end{frame}
+
+\end{document}
