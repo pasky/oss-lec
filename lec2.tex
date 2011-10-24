@@ -6,6 +6,7 @@
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{listings}
+\usepackage{tikz}
 
 \begin{document}
 
@@ -74,12 +75,17 @@
 \section{Přehled}
 
 \subsection{}
-\begin{frame}{FreeDos}
+\begin{frame}{FreeDOS}
 \begin{itemize}
-\item Motivace
-\item Stav
-\item Vývoj
+\item 100\% MS-DOS compatible, GPLv2
+\item Kompatibilita, embedded vývoj, výuka
+\item Umí TCP/IP, web, přehrávání audia a videa, torrenty, \dots
+\item Stabilní verze, komunita, vývoj spí
 \end{itemize}
+\begin{tikzpicture}[remember picture,overlay]
+  \node [xshift=-4.25cm,yshift=-4.75cm,above right] at (current page.north east)
+    {\includegraphics[width=4cm]{fdfish-color-text.pdf}};
+\end{tikzpicture}
 \end{frame}
 
 \subsection{}
