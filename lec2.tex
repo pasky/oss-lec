@@ -55,19 +55,9 @@
 \subsection{}
 \begin{frame}{O čem dnes}
 \begin{itemize}
-\item Historické okénko (BSD, GNU a Linux)
 \item Z nabídky otevřených operačních systémů
+\item Historické okénko (BSD, GNU a Linux)
 \item Architektura systému Linux
-\end{itemize}
-\end{frame}
-
-
-\section{Historie}
-
-\subsection{}
-\begin{frame}{Malý návrat k historii}
-\begin{itemize}
-\item BSD386, GNU a Hurd, Minix a Linux
 \end{itemize}
 \end{frame}
 
@@ -158,19 +148,66 @@
 \end{frame}
 
 
-\section{Architektura Linuxu}
+\section{Historie}
+
+\subsection{}
+\begin{frame}{Počátek 90. let}
+\begin{itemize}
+\item Většina UNIXů uzavřená, drahá (až na BSD!)
+\item Na UNIX je potřeba superpočítač
+\item MINIX1: 16bitový, \$69, only educational use
+\item GNU: userland, překladač atd., ale chybí kernel!
+\item 386BSD: portuje se na x86, právní bitva s AT\&T
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Linus Torvalds, Helsinki}
+
+{\tt \footnotesize
+    Hello everybody out there using minix -
+
+    I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones. This has been brewing since april, and is starting to get ready. I'd like any feedback on things people like/dislike in minix, as my OS resembles it somewhat (same physical layout of the file-system (due to practical reasons) among other things).
+
+    I've currently ported bash(1.08) and gcc(1.40), and things seem to work. This implies that I'll get something practical within a few months, and I'd like to know what features most people would want. Any suggestions are welcome, but I won't promise I'll implement them :-)
+
+    Linus (torvalds@kruuna.helsinki.fi) \\
+    PS. Yes -- it's free of any minix code, and it has a multi-threaded fs. It is NOT portable (uses 386 task switching etc), and it probably never will support anything other than AT-harddisks, as that's all I have :-$($.
+}
+
+\end{frame}
+
+\subsection{}
+\begin{frame}{Raný Linux}
+\begin{itemize}
+\item {\em Sadly, a kernel by itself gets you nowhere. To get a working system you need a shell, compilers, a library etc. \dots Most of the tools used with linux are GNU software and are under the GNU copyleft.}
+\item Tanenbaum--Torvalds debate:
+\begin{itemize}
+\item A: {\em \dots{}designing a monolithic kernel in 1991 is
+a fundamental error.  Be thankful you are not my student.  You would not
+get a high grade for such a design :-) }
+\item L: {\em Your job is being a professor and researcher: That's one hell of a
+good excuse for some of the brain-damages of minix. }
+\item A: {\em I think it is a gross error to design an OS for any specific architecture, since that is not going to be around all that long. }
+\item L: {\em An acceptable trade-off, and one that made linux possible in the first place. }
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 \subsection{}
 \begin{frame}{Distribuce}
 \begin{itemize}
+\item Slackware
 \item Debian, Ubuntu
 \item RedHat (Fedora/RHEL, CentOS, \dots)
 \item SUSE (OpenSUSE/SLE)
 \item Arch Linux
 \item Gentoo, Linux from scratch
-\item Slackware
 \end{itemize}
 \end{frame}
+
+
+\section{Architektura Linuxu}
 
 \subsection{}
 \begin{frame}{Jádro systému}
