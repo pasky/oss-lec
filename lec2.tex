@@ -77,8 +77,8 @@
 \subsection{}
 \begin{frame}{FreeDOS}
 \begin{itemize}
-\item 100\% MS-DOS compatible, GPLv2
-\item Kompatibilita, embedded vývoj, výuka
+\item 100\% MS-DOS compatible, GPL
+\item Kompatibilita, embedded, výuka
 \item Umí TCP/IP, web, přehrávání audia a videa, torrenty, \dots
 \item Stabilní verze, komunita, vývoj spí
 \end{itemize}
@@ -91,57 +91,70 @@
 \subsection{}
 \begin{frame}{ReactOS}
 \begin{itemize}
-\item Motivace
-\item Stav
-\item Vývoj
+\item Windows XP/2003 compatible, GPL
+\item Líbí se architektura Windows, chceme plnou kompatibilitu\\ (i s drivery atd.)
+\item Alfaverze, kostra systému funguje, aplikací pramálo
+\item Vývoj se sune kupředu, propojený s wine
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{Haiku}
 \begin{itemize}
-\item Motivace
-\item Stav
-\item Vývoj
+\item Uživatelsky přívětivý, konzistentní desktopový OS
+\item Pokračování vývoje BeOS, MIT licence
+\item V zásadě funkční, chybí dobrá hardwarová podpora\\ (video, wifi)
+\item Návaznost: Syllable (POSIX)
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{Minix}
 \begin{itemize}
-\item Motivace
-\item Stav
-\item Vývoj
+\item Minimalistický POSIXový systém s mikrokernelem, BSD licence
+\item Výuka, spolehlivost, embedded
+\item Vývoj pomalý
+\item Historicky: A. Tanenbaum, {\em Operating Systems: Design and Implementation}
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{*BSD}
 \begin{itemize}
-\item z UNIXu
-\item FreeBSD:
-\item NetBSD:
-\item OpenBSD:
-\item Dragonfly etc.
-\item Kernel+userspace
-\item Ports, CVS, commiters
+\item Berkeley Software Distribution: \\ Plynule vyvinuté z původního UNIXu
+\item FreeBSD: Obecná použitelnost, výkon
+\item NetBSD: Portabilita!
+\item OpenBSD: Bezpečnost!
+\item Součástí zdrojového stromu je kernel i základní userspace
+\item Distribuce software v rámci ports
 \end{itemize}
+\begin{tikzpicture}[remember picture,overlay]
+  \node [xshift=-4.25cm,yshift=-5.85cm,above right] at (current page.north east)
+    {\includegraphics[width=4cm]{standing_daemon.jpg}};
+\end{tikzpicture}
 \end{frame}
 
 \subsection{}
 \begin{frame}{OpenSolaris}
 \begin{itemize}
-\item Neutěšený stav
+\item SVR4: Plynule vyvinuté z původního UNIXu
+\item Otevření vývoje Solarisu Sunem
+\item Vlastní CCDL licence
+\item Téměř zánik po převzetí Oracle (OpenIndiana)
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{Linux}
 \begin{itemize}
-\item Stav
-\item Vývoj jádra
-\item Fragmenty userspace
+\item Nejrozšířenější otevřený OS
+\item Pouze kernel, userspace různá \\ (obvykle GNU atd.)
+\item Patche jdou (teoreticky) přes jediného \\ člověka (jistý Linus T.)
 \end{itemize}
+\begin{tikzpicture}[remember picture,overlay]
+  \node [xshift=-4cm,yshift=-5.85cm,above right] at (current page.north east)
+    {\includegraphics[width=3.5cm]{Tux.pdf}};
+\end{tikzpicture}
 \end{frame}
 
 
