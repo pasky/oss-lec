@@ -1,0 +1,245 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{circles}
+\useoutertheme[subsection=false]{smoothbars}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{tikz}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Open source programování}
+\subtitle{Otevřené vývojové prostředí}
+\author{Petr Baudiš $\langle${\tt pasky@ucw.cz}$\rangle$}
+\institute{MFF UK 2011\\
+	\vskip 1ex
+	\pgfdeclareimage[height=4ex]{ccbysa}{by-sa.pdf}
+	\pgfuseimage{ccbysa}
+}
+\date{}
+\frame{\titlepage}
+
+\section{Úvod}
+
+\subsection{}
+\begin{frame}{Úžasný nový svět\dots}
+\begin{center}
+{\bf Otevřené vývojové prostředí}
+\end{center}
+\begin{itemize}
+\item Tvořeno programátory\dots hlavně pro programátory?
+\item Excelentní podpora pro systémové programátory
+\item Přístup ke zdrojákům, snadné debugování
+\item Menší důraz na IDE
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{O čem dnes}
+\begin{itemize}
+\item C, C++ toolchain
+\item Základní knihovny
+\item Dokumentace
+\item Skriptovací jazyky
+\item Verzovací systémy
+\end{itemize}
+\end{frame}
+
+
+\section{C, C++ toolchain}
+
+\subsection{}
+\begin{frame}{GNU Compiler Collection}
+\begin{itemize}
+\item {\bf gcc}
+\item Historie
+\item Standardy
+\item Featury, rozšíření
+\item Model překladu C
+\item Usage --- preprocesor, překladač, linker
+\item Základní flagy
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{GNU Binutils}
+\begin{itemize}
+\item Linker, assembler, dumper
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{GNU Make}
+\begin{itemize}
+\item Základní použití
+\item Konkurence: cmake
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{GNU Autotools}
+\begin{itemize}
+\item M4
+\item GNU autoconf
+\item GNU automake
+\item GNU libtool
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{GNU Debugger}
+\begin{itemize}
+\item {\bf gdb}
+\item Historie
+\item Featury, základní použití
+\item Goodies --- TUI
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{IDE}
+\begin{itemize}
+\item Eclipse
+\item RHIDE
+\item KDevelop
+\item EMACS nebo vim!
+\end{itemize}
+\end{frame}
+
+
+\section{Základní knihovny}
+
+\subsection{}
+\begin{frame}{GNU libc}
+\begin{itemize}
+\item Standardy, základní featury, dělení
+\item Zajímavá rozšíření
+\item Dynamický linker
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Systémové knihovny}
+\begin{itemize}
+\item libevent
+\item libnih
+\item GLib
+\item libucw
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{SDL}
+\begin{itemize}
+\item Simple DirectMedia Layer
+\item Základní featury
+\item Dělení
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{GTK}
+\begin{itemize}
+\item GIMP Toolkit
+\item Základní featury
+\item Architektura
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Qt}
+\begin{itemize}
+\item Základní featury
+\item Architektura
+\end{itemize}
+\end{frame}
+
+
+\section{Dokumentace}
+
+\subsection{}
+\begin{frame}{\dots ostatních projektů}
+\begin{itemize}
+\item Manuálové stránky
+\item GNU info (pinfo!)
+\item Web $:-($
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Generování dokumentace}
+\begin{center}
+\begin{block}{Docbook}
+\begin{itemize}
+\item Základní featury
+\item Preprocesory (markdown, asciidoc)
+\end{itemize}
+\end{block}
+\begin{block}{Doxygen}
+\begin{itemize}
+\item Z kódu
+\end{itemize}
+\end{block}
+\end{center}
+\end{frame}
+
+
+\section{Skriptovací jazyky}
+
+\subsection{}
+\begin{frame}{Shell}
+\begin{itemize}
+\item GNU bash, zsh, (dash)
+\item GNU coreutils
+\item Standardy, rozšíření
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Další}
+\begin{itemize}
+\item Perl
+\item Python
+\item Ruby, PHP, \dots
+\end{itemize}
+\end{frame}
+
+
+\section{Verzovací systémy}
+
+\subsection{}
+\begin{frame}{Tradiční}
+\begin{itemize}
+\item CVS
+\item Subversion
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Distribuované}
+\begin{itemize}
+\item Git
+\item Mercurial
+\item Bazaar
+\item Fossil
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Děkuji za pozornost}
+\begin{center}
+Příště: Gitový tutorial (SU1!)
+\end{center}
+\end{frame}
+
+\end{document}
