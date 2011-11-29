@@ -67,7 +67,7 @@
 \begin{block}{Rozšíření}
 \begin{itemize}
 \item typeof, long long, {\tt x ? : y}, {\tt case 1 ... 5}, {\tt 0b1011}
-\item Atributy funkcí (aj.) --- noinline, pure a const, atd.
+\item Atributy funkcí (aj.) --- noinline, pure a const, constructor, atd.
 \item Atomické operace, thread-local proměnné, vektorové typy
 \item Inline assembler
 \end{itemize}
@@ -90,9 +90,9 @@
 \subsection{}
 \begin{frame}{Tvorba knihoven (shared objects)}
 \begin{itemize}
-\item Viditelnost symbolů (TODO)
-\item Relokace (TODO)
-\item Export proměnných (TODO)
+\item Verzování: major.minor.patchlevel, API vs ABI, verzované symboly
+\item Viditelnost symbolů: {\tt -fvisibility=hidden}, {\tt \_\_attribute\_\_((visibility ("default")))}, \\ version scripty
+\item Relokace: Vyhněte se externím proměnným, uvnitř knihovny používejte lokální definice
 \item Jednoduché použití: {\tt gcc -Wall -O3 -g {\bf -shared -fPIC} \\ -o soubor.so soubor.c}
 \end{itemize}
 \end{frame}
