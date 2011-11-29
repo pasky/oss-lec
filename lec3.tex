@@ -104,7 +104,7 @@
 \item Assembler {\tt as}: Vyrábí {\tt .c} z {\tt .s} místo {\tt .c} \\ AT\&T synaxe! (vs. nasm)
 \item Dumpery: {\tt nm}, {\tt objdump}, {\tt readelf}
 \vskip 3ex
-\item Konkurence: Gold (TODO), elfutils (TODO)
+\item Konkurence: elfutils
 \end{itemize}
 \end{frame}
 
@@ -115,7 +115,7 @@
 \begin{center}
 Automatický překlad, přestaví právě věci, které jsou potřeba
 \vskip 3ex
-\begin{exampleblock}{Příklad}
+\begin{exampleblock}{Makefile}
 \begin{lstlisting}
 OBJS=soubor1.o soubor2.o
 
@@ -127,10 +127,11 @@ clean:
   rm -f $(OBJS)
 \end{lstlisting}
 \end{exampleblock}
-\vskip 3ex
+{\tt make clean} \\
+{\tt make} \\
+\vskip 2ex
 \begin{itemize}
-\item Úskalí: Rekurzivní make, automatický dependency tracking
-\item Konkurence: cmake (TODO)
+\item Úskalí: Rekurzivní make, paralelní make, \\ automatický dependency tracking
 \end{itemize}
 \end{center}
 \end{frame}
@@ -143,7 +144,8 @@ clean:
 \item GNU libtool: Portabilní výroba knihoven
 \item GNU autoconf: Automatická detekce přítomných featur \\ a knihoven, compile-time konfigurace; {\tt ./configure}
 \vskip 3ex
-\item Konkurence: {\tt Makefile.lib} apod.
+\item Buildovací návody knihoven: pkg-config
+\item Konkurence: {\tt Makefile.lib} apod., cmake
 \end{itemize}
 \end{frame}
 
