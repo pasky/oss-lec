@@ -146,6 +146,21 @@ clean:
 \end{frame}
 
 \subsection{}
+\begin{frame}{GNU Gettext}
+\begin{itemize}
+\item Jak na i18n, l10n?
+\item Internationalization: Systém charsetů a locales
+\item Localization: Překlad textové komunikace s uživatelem
+\vskip 3ex
+\item Ve zdrojáku anglický string obalený makrem {\tt \_()}
+\item Pro každý jazyk katalog zpráv s překlady
+\item Kostra automaticky generovaná ze zdrojáku
+\item Generuje separátní binární soubor, \\ runtime lookup na základě {\tt \$LC\_MESSAGES}
+\item Podpora pro kontext, plurály atd.
+\end{itemize}
+\end{frame}
+
+\subsection{}
 \begin{frame}{GNU Debugger}
 \begin{itemize}
 \item {\bf gdb} --- hlavně C, ale i spousta dalších jazyků
