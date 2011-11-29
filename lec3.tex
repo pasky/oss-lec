@@ -39,7 +39,7 @@
 \begin{itemize}
 \item Tvořeno programátory\dots hlavně pro programátory?
 \item Excelentní podpora pro systémové programátory
-\item Přístup ke zdrojákům, snadné debugování
+\item Kolísavá kvalita dokumentace, ale přístup ke zdrojákům
 \item Menší důraz na IDE
 \end{itemize}
 \end{frame}
@@ -61,48 +61,102 @@
 \subsection{}
 \begin{frame}{GNU Compiler Collection}
 \begin{itemize}
-\item {\bf gcc}
-\item Historie
-\item Standardy
-\item Featury, rozšíření
-\item Model překladu C
-\item Usage --- preprocesor, překladač, linker
-\item Základní flagy
+\item {\bf gcc}, jeden z prvních a úhelných kamenů GNU
+\item Standardy --- C89, C99, C++98, C++0x TODO
+\end{itemize}
+\begin{block}{Rozšíření}
+\begin{itemize}
+\item Inline assembler
+\item TODO
+\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Model překladu C}
+\begin{itemize}
+\item Preprocessing: {\tt gcc -E}
+\item {\tt .c} $\to$ {\tt .o}: Překlad, {\tt gcc -c}
+\item {\tt .o} $\to$ spustitelný soubor: Linkování, {\tt gcc}
+\item {\tt .c} $\to$ {\tt .o}: Taky stačí {\tt gcc}
+\item Jednoduché použití: {\tt gcc -Wall -O3 -g \\ -o soubor soubor.c}
+\vskip 3ex
+\item ELF: Univerzální formát binárních souborů \\ (objekt, executable, core dump)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Tvorba knihoven (shared objects)}
+\begin{itemize}
+\item Viditelnost symbolů (TODO)
+\item Relokace (TODO)
+\item Export proměnných (TODO)
+\item Jednoduché použití: {\tt gcc -Wall -O3 -g {\bf -shared -fPIC} \\ -o soubor.so soubor.c}
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{GNU Binutils}
 \begin{itemize}
-\item Linker, assembler, dumper
+\item Linker {\tt ld}: Obvykle jen backend pro gcc; linker skripty
+\item Assembler {\tt as}: Vyrábí {\tt .c} z {\tt .s} místo {\tt .c} \\ AT\&T synaxe! (vs. nasm)
+\item Dumpery: {\tt nm}, {\tt objdump}, {\tt readelf}
+\vskip 3ex
+\item Konkurence: Gold (TODO), elfutils (TODO)
 \end{itemize}
 \end{frame}
 
+\lstset{basicstyle=\tiny\tt}
+
 \subsection{}
-\begin{frame}{GNU Make}
+\begin{frame}[fragile]{GNU Make}
+\begin{center}
+Automatický překlad, přestaví právě věci, které jsou potřeba
+\vskip 3ex
+\begin{exampleblock}{Příklad}
+\begin{lstlisting}
+OBJS=soubor1.o soubor2.o
+
+all: program
+program: $(OBJS)
+  $(CC) $(LDFLAGS) -o $@ $^
+
+clean:
+  rm -f $(OBJS)
+\end{lstlisting}
+\end{exampleblock}
+\vskip 3ex
 \begin{itemize}
-\item Základní použití
-\item Konkurence: cmake
+\item Úskalí: Rekurzivní make, automatický dependency tracking
+\item Konkurence: cmake (TODO)
 \end{itemize}
+\end{center}
 \end{frame}
 
 \subsection{}
 \begin{frame}{GNU Autotools}
 \begin{itemize}
-\item M4
-\item GNU autoconf
-\item GNU automake
-\item GNU libtool
+\item M4: Univerzální makroprocesor
+\item GNU automake: ``Zjednodušení'' tvorby Makefiles
+\item GNU libtool: Portabilní výroba knihoven
+\item GNU autoconf: Automatická detekce přítomných featur \\ a knihoven, compile-time konfigurace; {\tt ./configure}
+\vskip 3ex
+\item Konkurence: {\tt Makefile.lib} apod.
 \end{itemize}
 \end{frame}
 
 \subsection{}
 \begin{frame}{GNU Debugger}
 \begin{itemize}
-\item {\bf gdb}
-\item Historie
-\item Featury, základní použití
-\item Goodies --- TUI
+\item {\bf gdb} --- hlavně C, ale i spousta dalších jazyků
+\item Spuštění + breakpoint nebo analýza coredumpu
+\item Trasování, vypisování hodnot atd.
+\item Watchpointy, podmíněné breakpointy, změny hodnot, \dots
+\item Interface: Rozhovor, TUI, GUI (ddd)
+\item Jednoduché použití: {\tt bt} a {\tt frame}, {\tt print} a {\tt display}, \\ {\tt next} a {\tt step}, {\tt list}
+\item Low-level: {\tt disas}, {\tt info reg} a {\tt x}, {\tt nexti} a {\tt stepi}
+\vskip 3ex
+\item {\tt ptrace()} syscall
 \end{itemize}
 \end{frame}
 
@@ -211,6 +265,8 @@
 \item Perl
 \item Python
 \item Ruby, PHP, \dots
+\vskip 3ex
+\item SWIG
 \end{itemize}
 \end{frame}
 
