@@ -62,12 +62,14 @@
 \begin{frame}{GNU Compiler Collection}
 \begin{itemize}
 \item {\bf gcc}, jeden z prvních a úhelných kamenů GNU
-\item Standardy --- C89, C99, C++98, C++0x TODO
+\item Standardy --- C89, C99, C++98, C(++)1x; \\ Objective C, Fortran, Java, Ada
 \end{itemize}
 \begin{block}{Rozšíření}
 \begin{itemize}
+\item typeof, long long, {\tt x ? : y}, {\tt case 1 ... 5}, {\tt 0b1011}
+\item Atributy funkcí (aj.) --- noinline, pure a const, atd.
+\item Atomické operace, thread-local proměnné, vektorové typy
 \item Inline assembler
-\item TODO
 \end{itemize}
 \end{block}
 \end{frame}
@@ -192,11 +194,12 @@ clean:
 \begin{frame}{GNU libc}
 \begin{itemize}
 \item {\bf glibc} --- C runtime (ne C++), POSIXové API a příbuzní
-\item Standardy --- Cx9, POSIX.*, TODO; \\ Často GNU rozšíření pro redundantní verze
+\item Standardy --- Cx9, POSIX.*, SysV/BSD
 \item Částečná koevoluce s libiberty a GNUlib
-\item Charsets a locales, gettext runtime, třídění a vyhledávání, matchování globů a regulárních výrazů, I/O nad streamy i deskriptory, soubory a sockety, terminály, signály a IPC, procesy, job control, syslog, name resolution, matematické funkce, datum a čas, control flow, dynamický linker, proměnné prostředí, charakteristiky systému, kryptografické funkce
+{\footnotesize \item Charsets a locales, gettext runtime, třídění a vyhledávání, matchování globů a regulárních výrazů, I/O nad streamy i deskriptory, soubory a sockety, terminály, signály a IPC, procesy, job control, syslog, name resolution, matematické funkce, datum a čas, control flow, dynamický linker, proměnné prostředí, charakteristiky systému, kryptografické funkce}
 \item Multi-threading (pthreads: NPTL, (mrtvé) LinuxThreads)
 \item Zajímavé featurky: I/O (vektorové, asynchronní, mmapové, dyn. alokované, \dots), dočasné soubory, {\tt backtrace()}, NSS, customizace {\tt printf}, rozšíření paměťového alokátoru, obstacks
+\item Často GNU rozšíření pro reentrantní verze; \\ {\tt strverscmp()}, hledej {\tt \_GNU\_SOURCE}
 \end{itemize}
 \end{frame}
 
