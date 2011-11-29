@@ -191,9 +191,12 @@ clean:
 \subsection{}
 \begin{frame}{GNU libc}
 \begin{itemize}
-\item Standardy, základní featury, dělení
-\item Zajímavá rozšíření
-\item Dynamický linker
+\item {\bf glibc} --- C runtime (ne C++), POSIXové API a příbuzní
+\item Standardy --- Cx9, POSIX.*, TODO; \\ Často GNU rozšíření pro redundantní verze
+\item Částečná koevoluce s libiberty a GNUlib
+\item Charsets a locales, gettext runtime, třídění a vyhledávání, matchování globů a regulárních výrazů, I/O nad streamy i deskriptory, soubory a sockety, terminály, signály a IPC, procesy, job control, syslog, name resolution, matematické funkce, datum a čas, control flow, dynamický linker, proměnné prostředí, charakteristiky systému, kryptografické funkce
+\item Multi-threading (pthreads: NPTL, (mrtvé) LinuxThreads)
+\item Zajímavé featurky: I/O (vektorové, asynchronní, mmapové, dyn. alokované, \dots), dočasné soubory, {\tt backtrace()}, NSS, customizace {\tt printf}, rozšíření paměťového alokátoru, obstacks
 \end{itemize}
 \end{frame}
 
@@ -204,32 +207,25 @@ clean:
 \item libnih
 \item GLib
 \item libucw
+\vskip 3ex
+\begin{block}{Terminálové knihovny}
+\begin{itemize}
+\item Termcap a terminfo
+\item GNU Readline
+\item NCurses
+\item SLang
+\end{itemize}
+\end{block}
 \end{itemize}
 \end{frame}
 
 \subsection{}
-\begin{frame}{SDL}
+\begin{frame}{Omalovánkové knihovny}
 \begin{itemize}
-\item Simple DirectMedia Layer
-\item Základní featury
-\item Dělení
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{GTK}
-\begin{itemize}
-\item GIMP Toolkit
-\item Základní featury
-\item Architektura
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{Qt}
-\begin{itemize}
-\item Základní featury
-\item Architektura
+\item SDL --- ``low-level'' grafika, I/O, zvuk, \dots
+\item Cairo --- vektorová grafika, mnoho výstupů
+\item GTK --- okénka Cčkově (event a callback)
+\item Qt --- okénka C++kově (signal a slot), i non-GUI věci
 \end{itemize}
 \end{frame}
 
@@ -239,7 +235,7 @@ clean:
 \subsection{}
 \begin{frame}{\dots ostatních projektů}
 \begin{itemize}
-\item Manuálové stránky
+\item Manuálové stránky (linux-manpages)
 \item GNU info (pinfo!)
 \item Web $:-($
 \item Use the Source, Luke
