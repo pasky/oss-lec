@@ -48,9 +48,6 @@
 \begin{frame}{O čem dnes}
 \begin{itemize}
 \item C, C++ toolchain
-\item Základní knihovny
-\item Dokumentace
-\item Skriptovací jazyky
 \item Verzovací systémy
 \end{itemize}
 \end{frame}
@@ -186,112 +183,6 @@ clean:
 \item RHIDE
 \item KDevelop
 \item EMACS nebo vim!
-\end{itemize}
-\end{frame}
-
-
-\section{Základní knihovny}
-
-\subsection{}
-\begin{frame}{GNU libc}
-\begin{itemize}
-\item {\bf glibc} --- C runtime (ne C++), POSIXové API a příbuzní
-\item Standardy --- Cx9, POSIX.*, SysV/BSD
-\item Částečná koevoluce s libiberty a GNUlib
-{\footnotesize \item Charsets a locales, gettext runtime, třídění a vyhledávání, matchování globů a regulárních výrazů, I/O nad streamy i deskriptory, soubory a sockety, terminály, signály a IPC, procesy, job control, syslog, name resolution, matematické funkce, datum a čas, control flow, dynamický linker, proměnné prostředí, charakteristiky systému, kryptografické funkce}
-\item Multi-threading (pthreads: NPTL, (mrtvé) LinuxThreads)
-\item Zajímavé featurky: I/O (vektorové, asynchronní, mmapové, dyn. alokované, \dots), dočasné soubory, {\tt backtrace()}, NSS, customizace {\tt printf}, rozšíření paměťového alokátoru, obstacks
-\item Často GNU rozšíření pro reentrantní verze; \\ {\tt strverscmp()}, hledej {\tt \_GNU\_SOURCE}
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{Systémové knihovny}
-\begin{itemize}
-\item libevent
-\item libnih
-\item GLib
-\item libucw
-\vskip 3ex
-\begin{block}{Terminálové knihovny}
-\begin{itemize}
-\item Termcap a terminfo
-\item GNU Readline
-\item NCurses
-\item SLang
-\end{itemize}
-\end{block}
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{Omalovánkové knihovny}
-\begin{itemize}
-\item SDL --- ``low-level'' grafika, I/O, zvuk, \dots
-\item Cairo --- vektorová grafika, mnoho výstupů
-\item GTK --- okénka Cčkově (event a callback)
-\item Qt --- okénka C++kově (signal a slot), i non-GUI věci
-\end{itemize}
-\end{frame}
-
-
-\section{Dokumentace}
-
-\subsection{}
-\begin{frame}{\dots ostatních projektů}
-\begin{itemize}
-\item Manuálové stránky (linux-manpages)
-\item GNU info (pinfo!)
-\item Web $:-($
-\item Use the Source, Luke
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{Generování dokumentace}
-\begin{center}
-\begin{block}{Docbook}
-\begin{itemize}
-\item Dokumentace v (rozumném) XML formátu, \\ export do spousty výstupních formátů (HTML, PDF, man, \dots)
-\item Preprocesory (asciidoc, markdown, \dots)
-\end{itemize}
-\end{block}
-\begin{block}{Doxygen}
-\begin{itemize}
-\item Referenční programátorská dokumentace
-\item Z komentářů přímo v kódu
-\item Automatické cross-reference
-\end{itemize}
-\end{block}
-\end{center}
-\end{frame}
-
-
-\section{Skriptovací jazyky}
-
-\subsection{}
-\begin{frame}{Shell}
-\begin{itemize}
-\item GNU bash, zsh, (dash)
-\item GNU coreutils
-\item POSIX (aktivní drive; {\tt \$POSIXLY\_CORRECT})
-\item Roztodivná rozšíření
-\end{itemize}
-\end{frame}
-
-\subsection{}
-\begin{frame}{Další}
-\begin{itemize}
-\item Perl: There is more than one way to do it
-\item Python: There should be one --- and preferably only one --- obvious way to do it
-\item Scheme: Tradiční skriptovací jazyk GNU
-\item Tcl: Hordy zombies
-\item Lua, CLisp, Ruby, PHP, \dots
-\vskip 3ex
-\item SWIG: Bindingy C funkcí do různých skriptovacích jazyků
-\item Naopak: Problematické, nutno ručně
-\vskip 3ex
-\item flex a bison --- scanner a parser (generátor C kódu)
 \end{itemize}
 \end{frame}
 
