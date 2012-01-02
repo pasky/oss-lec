@@ -1,0 +1,235 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{circles}
+\useoutertheme[subsection=false]{smoothbars}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{tikz}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Open source programování}
+\subtitle{Život a správa open source projektů}
+\author{Petr Baudiš $\langle${\tt pasky@ucw.cz}$\rangle$}
+\institute{MFF UK 2011\\
+	\vskip 1ex
+	\pgfdeclareimage[height=4ex]{ccbysa}{by-sa.pdf}
+	\pgfuseimage{ccbysa}
+}
+\date{}
+\frame{\titlepage}
+
+\section{Úvod}
+
+\subsection{}
+\begin{frame}{O čem dnes}
+\begin{itemize}
+\item Jak se vám daří?
+%\item Zamyšlení: Richard Stallman Was Right All Along? \\
+%	Aneb --- váš přístup k open source!
+\vskip 3ex
+\item Jak udělat svůj projekt open source
+\item Co až se váš projekt stane populární
+\item Když se správce a vývojář(i) neshodnou
+\end{itemize}
+\end{frame}
+
+
+\section{Uvolněte (se), prosím}
+
+\subsection{}
+\begin{frame}{Minimální kuchařka}
+\begin{itemize}
+\item Měli byste mít v ruce první funkční prototyp
+\item Není to žádná věda! Nechte se nést entuziasmem :-)
+\item Upload na GitHub nebo jiný hosting
+\item Jednoduchá homepage --- {\bf co to je}, {\bf kde to stáhnout} \\ a {\bf kam posílat patche}
+\item Announcement na relevantních místech
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Výběr licence}
+\begin{itemize}
+\item Jak byste to dělali?
+\item Zvyková, GPL (verze?), BSD/MIT
+\item Změny jsou pracné\dots (Open Street Map)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Neminimální kuchařka}
+\begin{itemize}
+\item {\bf Kašlete na dokonalý kód}
+\item {\bf Kašlete na (nefatální) chyby}
+\vskip 3ex
+\item Čitelný kód je dobrý nápad\dots psát od začátku
+\item Dokumentace: Jednostránkové README je lepší než žádné
+\item Zajistěte snadný způsob postavení programu \\ (Makefile, INSTALL)
+\item Infrastruktura: Nepřehánějte to!
+\pause
+\vskip 3ex
+\item Open source podklad (vs. Eagle, BitKeeper)
+\item Dobrý občan ekosystému: UNIXový nástroj! (vs. LibreOffice) \\
+	Myslete na interoperabilitu (zaměnitelnost) \\ a flexibilitu (konfigurovatelnost)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Aby o tom někdo věděl}
+\begin{itemize}
+\item Není jednoduché řešení
+\item Word of mouth, Google, Freshmeat
+\vskip 3ex
+\item Announcement --- mail nebo post
+\item Tematická skupina --- uživatelé příbuzného software, \\ uživatelé stávající konkurence, zájemci o téma \dots
+\item Zaujměte, ale střídmě!
+\item {\bf Co to je} (v čem to je jiné), {\bf kde to stáhnout}, \\ v jakém je to stavu, na jakou platformu + v jakém jazyce \\ + pod jakou licencí to je
+\end{itemize}
+\end{frame}
+
+
+\section{Spravujeme projekt}
+
+\subsection{}
+\begin{frame}{Metody řízení}
+\begin{itemize}
+\item Meritokracie! (c.f. Vzestup metirokracie)
+\item Vyvíjejí {\em lidé}, ne firmy
+\item The Cathedral vs. the Bazaar
+\item Benevolent dictator, patch pumpkin, steering committee, committer group, ``hlasování''
+\item Vyhněte se overengineeringu
+\vskip 3ex
+\item Právní struktura --- velké projekty, správa peněz a trademarků
+\item Neziskovky, US 501(c)3
+\item FSF; Linux, Apache, GNOME Foundation
+\item Deštníky SFC, SPI
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Minimální kuchařka}
+\begin{itemize}
+\item Odpovídejte obratem
+\item Nebuďte perfekcionisty (coding style, perfect is enemy of~good)
+\item Buďte perfekcionisty (vedení a idea --- dobrý vkus!)
+\item Inspirujte se\dots
+\vskip 3ex
+\pause
+\item Nabídněte co nejpřímější (psychologickou) odměnu
+\item Pečlivě zdůrazňujte ostatní autory
+\item Release early, release often!
+\item Diskutujte, nebojte si říct o patch
+\vskip 3ex
+\pause
+\item Vzkvétá projekt, který roste \\ (Někdo po vás fixuje bugy a udržuje projekt funkční)
+\item Delegujte, nezapomínejte na user experience
+\item Váš projekt by měl mít balíček!
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Vyhněte se\dots}
+\begin{itemize}
+\item Problémům s větvemi a verzemi
+\begin{itemize}
+\item Zdržování releasů (nepřiměřené cíle)
+\item Příliš košatá struktura
+\item Nesmyslná čísla verzí (věčné 0.x)
+\end{itemize}
+\item Překážkám při stahování
+\item Překážkám při přispívání
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Uživím se tím?}
+\begin{itemize}
+\item Není jednoduché řešení
+\vskip 3ex
+\item Placená podpora (Cygnus, Red Hat, Novell, Oracle, \dots)
+%  Cygnus 'Open Sources'
+\item Placená rozšíření (Novell, CMS, volná noha)
+\item Double licencing (Qt, MySQL)
+\item Reklama (Mozilla, BackTrack, MySQL)
+\item Dary (Wikipedia, někdy bug bounties)
+\item HW příslušenství (embedded)
+\item Infrastruktura (IBM)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{A jinak?}
+\begin{itemize}
+\item Volnočasová aktivita (ale proč to lidé dělají?)
+\pause
+\begin{itemize}
+\item ``Scratching an itch''
+\item Konstruktivní prokrastinace --- závislost
+\item Puntík v CVčku nebo world domination
+\item {\bf Ego-boo!} (vs. self-deprecation)
+\end{itemize}
+\pause
+\item Google Summer of Code
+\item Zaměstnání v OSS společnosti
+\item Zaměstnání v Google atd.
+\item Nečekané výhody
+\end{itemize}
+\end{frame}
+
+
+\section{Fork me!}
+
+\subsection{}
+\begin{frame}{Proč}
+\begin{itemize}
+\item Blbej maintainer (Xorg, LibreOffice)
+\item Neaktivní vývoj (kompoZer, dbndns, ELinks)
+\item Pokračování svobodné verze (MariaDB, Xonotic)
+\item Jiná sada uživatelů, technické změny (WebKit, mplayer2)
+\item Vývoj vs. kompatibilita (GNU Arch --- Bazaar --- Bazaar NG --- Baz)
+\item Jiná sada featur (eglibc, kernelové větve)
+\item ``Vývojová větev'' (egcs, kernelové větve)
+\vskip 3ex
+\item Zkuste nejdříve jinou cestu, ale nebojte se!
+\item Fork zanikne (nejčastěji), připojí se zpět, nahradí originál \\ nebo žije paralelně
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Jak}
+\begin{itemize}
+\item Publikuji svojí verzi
+\item (Nenásilně) upozorním ostatní (vývojáře, uživatele)
+\item Upstream/downstream mergování
+\vskip 3ex
+\item Pozor na kompatibilitu API!
+\end{itemize}
+\end{frame}
+
+
+\subsection{}
+\begin{frame}{Děkuji za pozornost}
+\begin{center}
+Rekapitulace:
+\begin{itemize}
+\item Opensourcovat je snadné, neodkládejte to!
+\item Vyhněte se overengineeringu ve všech směrech
+\item Myslete na motivaci --- ego-boo
+\end{itemize}
+\vskip 3ex
+Příště: Závěrečná show (ve vaší režii).
+\end{center}
+\end{frame}
+
+\end{document}
