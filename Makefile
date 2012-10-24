@@ -1,7 +1,10 @@
-all: lec1.pdf lec2.pdf lec3.pdf lec4.pdf lec5.pdf
+SHELL=/bin/bash
+LECS=lec1.pdf lec2.pdf lec3.pdf lec4.pdf lec5.pdf
+
+all: $(LECS)
 
 clean:
-	rm -f lec[12345].{aux,dvi,log,nav,out,pdf,snm,toc}
+	for i in $(LECS:.pdf=); do rm -f $$i.{aux,dvi,log,nav,out,pdf,snm,toc}; done
 
 %.pdf: %.tex
 	pdflatex $<
