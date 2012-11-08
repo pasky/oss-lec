@@ -1,0 +1,258 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\useinnertheme{circles}
+\useoutertheme[subsection=false]{smoothbars}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{tikz}
+
+\begin{document}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Open source programování}
+\subtitle{Open source projekty}
+\author{Petr Baudiš $\langle${\tt pasky@ucw.cz}$\rangle$}
+\institute{MFF UK 2012\\
+	\vskip 1ex
+	\pgfdeclareimage[height=4ex]{ccbysa}{by-sa.pdf}
+	\pgfuseimage{ccbysa}
+}
+\date{}
+\frame{\titlepage}
+
+\section{Úvod}
+
+\subsection{}
+\begin{frame}{O čem dnes}
+\begin{center}
+{\bf Otevřené projekty}
+\end{center}
+\begin{itemize}
+\item Velké projekty! Linux Kernel, Libre Office, Firefox, Apache, Perl, \dots
+\item ``Obyčejné'' projekty! Git, ELinks, OpenTTD, Pachi, Bitcoin, \dots
+\item Linuxové distribuce! Debian, openSUSE, \dots
+\item \dots ale také Wikipedia nebo RepRap.
+\vskip 4ex
+\item Jaký je proces přijetí patche?
+\item Kdo se stará o vydávání nových verzí projektu?
+\item Jak vývojáři činí důležitá rozhodnutí?
+\item Jak je projekt oficiálně zaštítěn?
+\end{itemize}
+\end{frame}
+
+
+\section{Linux Kernel}
+
+\subsection{}
+\begin{frame}{Linux Kernel}
+\begin{itemize}
+\item Od roku 1991, Linus Torvalds, GPLv2
+\item 15 milionů řádek kódu, $> 2000$ aktivních vývojářů; mailing list oriented
+\item Maintenance: Dříve sudé/liché větve, nyní stable větve, time-based release cycle
+\item Zastřešení: Linux Foundation (až od roku 2007)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Jikosova prezentace}
+\begin{center}
+	\dots
+\end{center}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Patch Sample}
+\begin{center}
+% http://thread.gmane.org/gmane.linux.usb.general/55370
+% http://thread.gmane.org/gmane.linux.usb.general/55406
+% http://thread.gmane.org/gmane.linux.usb.general/55653
+% http://thread.gmane.org/gmane.linux.usb.general/55658
+% http://repo.or.cz/w/linux-2.6.git/commit/c91043adaf50ef13609003120f3471783460fb71
+	\dots
+\end{center}
+\end{frame}
+
+
+\section{Libre Office}
+
+\subsection{}
+\begin{frame}{Libre Office}
+\begin{itemize}
+\item Star Office $\rightarrow$ Open Office $\rightarrow$ Libre Office
+\item Meritokracie, review-and-push; poslední záchrana: steering committee
+\item Time-based release cycle, LGPLv3
+\item Zastřešení: The Document Foundation
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Kendyho prezentace}
+\begin{center}
+	\dots
+\end{center}
+\end{frame}
+
+
+\section{GNU libc}
+
+\subsection{}
+\begin{frame}{glibc}
+\begin{itemize}
+\item Jeden z hlavních GNU projektů
+\item TODO
+\end{itemize}
+\end{frame}
+
+
+\section{Další projekty}
+
+\subsection{}
+\begin{frame}{Firefox}
+\begin{itemize}
+\item Netscape Navigator $\rightarrow$ Mozilla Suite $\rightarrow$ Firefox
+\item Vývoj zejména kolem Bugzilly, meritokracie
+\item Kontroverzní číslování verzí
+\item Zastřešení: Mozilla Foundation
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Apache}
+\begin{itemize}
+\item Původně httpd, dále různé javové knihovny, Hadoop, \dots
+\item ``Konsensuální meritokracie:'' po třech měsících commiterem, +1/-1 hlasování mezi committery, -1 je veto, které lze přehlasovat 3/4 hlasů.
+\item Zastřešení: Apache Software Foundation
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Perl}
+\begin{itemize}
+\item Od roku 1987, Larry Wall (patch pumpkin), Perl Artistic Licence / GPL
+\item Perl Artistic Licence: zverejnění změn a copyleft --- nebo přejmenování; omezení komerčního šíření
+\item Patch Pumpkin; bug tracker oriented, perl5-porters
+\item Zastřešení: Perl Foundation
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Git}
+\begin{itemize}
+\item Od roku 2005, Linus Torvalds a pak Junio C. Hamano, GPL
+\item Benevolent dictator, mailing list oriented
+\item Dichotomie: linuxový kernel vs. free-cool-in web 2.0 vývojáři (github)
+\item Vývoj uživatelského rozhraní "technickým způsobem"
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{OpenTTD}
+\begin{itemize}
+\item Přepíšeme Transport Tycoon Deluxe do C; ludde $\to$ vurlix $\to$ komunita, GPL
+\item Vývoj zprvu prostřednitcvím ttdforums.net
+\item Committers, bug tracker
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{ELinks}
+\begin{itemize}
+\item Fork Linksu od roku 2001 (links-pb $\to$ links-hacked $\to$ Experimental Links $\to$ Enhanced Links), Petr Baudiš $\to$ Jonas Fonseca $\to$ Kalle Olavi Niemitalo, GPL
+\item Projekt ve spánku a bez jasného maintainera (zralý na fork?); neaktivní mailing list, bugzilla, git
+\item Vývoj stylem benevolent dictator nefunguje bez diktátora
+\item Nesmyslný release schedule --- realistické a {\em volné} cíle
+\item Perfect is enemy of good
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Pachi}
+\begin{itemize}
+\item Od roku 2007, projekt 1-2 lidí (Petr Baudiš, Jean-loup Gailly), GPL (původně část MIT)
+\item Vývoj: konflikt mezi open source a snahou o prvenství ve vědeckých výsledcích a turnajích
+\item Málo dobrovolníků :-( a pochybně responsivní maintainer
+\item Release schedule: ``když se nám chce'' :-)
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{Bitcoin}
+\begin{itemize}
+\item Od roku 2007 resp. 2009, Satoshi Nakamoto $\to$ Gavin Anderson et al., GPL
+\item Kdo je Satoshi Nakamoto?
+\item Na vývoji závisí peníze a úspory lidí! Přitom vývoj dost nejasný\dots
+\item Bitcoin Foundation --- kontroverze
+\end{itemize}
+\end{frame}
+
+
+\section{Distribuce}
+
+\subsection{}
+\begin{frame}{Debian}
+\begin{itemize}
+\item Bugreporty pres Debian BTS
+\item Začátek: Non-maintainer uploads (NMU), sponsoři
+\item Časem se člověk stane maintainerem; archivy spravují uploadeři
+\item Technické otázky: konsensus
+\item Debian Project:
+	\begin{itemize}
+	\item Debian Social Contract, DFSG, Debian Constitution
+	\item Project Leader, Secretary, Technical Committee
+	\item Demokratická organizace projektu (jako Apache)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{OpenSUSE}
+\begin{itemize}
+\item Zázemí Novell / SUSE, snaha předat vývoj komunitě se moc nedaří
+\item OpenSUSE Build Service
+\item \dots Stickova prezentace \dots
+\end{itemize}
+\end{frame}
+
+
+\section{Netradiční projekty}
+
+\subsection{}
+\begin{frame}{Wikipedia}
+\begin{itemize}
+\item Wikipedia není demokracie, vláda ``hrubého konsensu''
+\item Pravidla editována společně, problémy primárně řešeny diskusí
+\item Častý výskyt ``ideologických'' sporů
+\vskip 4ex
+\item {\em Technické} role: Správci, sysopové, byrokrati \dots \\
+		accountability, předcházení revert válkám
+\item {\em Technicko-politické} role: Stevardi (Wikimedia foundation)
+\item {\em Politické} role (prakticky neomezené pravomoc): Arbitrážní komise, Jimmy Wales
+\end{itemize}
+\end{frame}
+
+\subsection{}
+\begin{frame}{RepRap}
+\begin{itemize}
+\item RepRap --- klasické pull requesty atd.
+\item TODO
+\end{itemize}
+\end{frame}
+
+
+\subsection{}
+\begin{frame}{Děkuji za pozornost}
+\begin{center}
+Příště: První zápočtové prezentace! A architektura Linuxu.
+\end{center}
+\end{frame}
+
+\end{document}

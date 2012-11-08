@@ -1,5 +1,5 @@
 SHELL=/bin/bash
-LECS=lec1.pdf lec2.pdf lec3.pdf lec4.pdf lec5.pdf
+LECS=lec1.pdf lec2.pdf lec-projects.pdf lec3.pdf lec4.pdf lec5.pdf
 
 all: $(LECS)
 
