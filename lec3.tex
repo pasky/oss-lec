@@ -21,7 +21,7 @@
 \title{Open source programování}
 \subtitle{Otevřené vývojové prostředí}
 \author{Petr Baudiš $\langle${\tt pasky@ucw.cz}$\rangle$}
-\institute{MFF UK 2011\\
+\institute{MFF UK 2012\\
 	\vskip 1ex
 	\pgfdeclareimage[height=4ex]{ccbysa}{by-sa.pdf}
 	\pgfuseimage{ccbysa}
@@ -69,6 +69,9 @@
 \item Inline assembler
 \end{itemize}
 \end{block}
+\begin{center}
+	Dravá konkurence: LLVM
+\end{center}
 \end{frame}
 
 \subsection{}
@@ -78,7 +81,7 @@
 \item {\tt .c} $\to$ {\tt .o}: Překlad, {\tt gcc -c}
 \item {\tt .o} $\to$ spustitelný soubor: Linkování, {\tt gcc}
 \item {\tt .c} $\to$ {\tt .o}: Taky stačí {\tt gcc}
-\item Jednoduché použití: {\tt gcc -Wall -O3 -g \\ -o soubor soubor.c}
+\item Jednoduché použití: {\tt gcc -Wall -O3 -march=native \\ -g -o soubor soubor.c}
 \vskip 3ex
 \item ELF: Univerzální formát binárních souborů \\ (objekt, executable, core dump)
 \end{itemize}
@@ -90,7 +93,8 @@
 \item Verzování: major.minor.patchlevel, API vs ABI, verzované symboly
 \item Viditelnost symbolů: {\tt -fvisibility=hidden}, {\tt \_\_attribute\_\_((visibility ("default")))}, \\ version scripty
 \item Relokace: Vyhněte se externím proměnným, uvnitř knihovny používejte lokální definice
-\item Jednoduché použití: {\tt gcc -Wall -O3 -g {\bf -shared -fPIC} \\ -o soubor.so soubor.c}
+\item Jednoduché použití: {\tt gcc -Wall -O3 -march=native \\ -g {\bf -shared -fPIC} -o soubor.so soubor.c}
+\item Berte si příklad z existujících knihoven \\ U. Drepper: How to write shared libraries
 \end{itemize}
 \end{frame}
 
@@ -100,6 +104,7 @@
 \item Linker {\tt ld}: Obvykle jen backend pro gcc; linker skripty
 \item Assembler {\tt as}: Vyrábí {\tt .c} z {\tt .s} místo {\tt .c} \\ AT\&T synaxe! (vs. nasm)
 \item Dumpery: {\tt nm}, {\tt objdump}, {\tt readelf}
+\item Použití i v embdedded prostředí! Obecně lze cross-compilovat; configuration triplety ({\tt i586-linux-gnu}, {\tt arm-none-gnueabi}).
 \vskip 3ex
 \item Konkurence: elfutils
 \end{itemize}
@@ -169,8 +174,9 @@ clean:
 \item Trasování, vypisování hodnot atd.
 \item Watchpointy, podmíněné breakpointy, změny hodnot, \dots
 \item Interface: Rozhovor, TUI, GUI (ddd)
-\item Jednoduché použití: {\tt break} a {\tt run} a {\tt cont}, {\tt bt} a {\tt frame}, \\ {\tt print} a {\tt display}, {\tt next} a {\tt step}, {\tt list}
-\item Low-level: {\tt disas}, {\tt info reg} a {\tt x}, {\tt nexti} a {\tt stepi}
+\item Jednoduché použití: {\tt break} + {\tt run} + {\tt cont}, {\tt bt} + {\tt frame}, \\ {\tt print} + {\tt display}, {\tt next} + {\tt step}, {\tt list}
+\item Low-level: {\tt disas}, {\tt info reg} + {\tt x}, {\tt nexti} + {\tt stepi}
+\item Možnost odděleného serveru (hlavně pro embedded development)
 \vskip 3ex
 \item {\tt ptrace()} syscall
 \end{itemize}
@@ -215,7 +221,7 @@ It's simplest to think of the state of your Git repository as a point in a high-
 \subsection{}
 \begin{frame}{Děkuji za pozornost}
 \begin{center}
-Příště: Gitový tutorial (SU1!)
+Příště: ???
 \end{center}
 \end{frame}
 
